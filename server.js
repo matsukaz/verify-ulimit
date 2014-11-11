@@ -16,3 +16,7 @@ app.get('/', function (req, res) {
 
 var server = app.listen(80);
 
+ulimit(function(err, result) {
+  if (err) return;
+  console.log(JSON.stringify(result));
+});
